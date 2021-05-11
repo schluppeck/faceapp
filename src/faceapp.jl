@@ -13,16 +13,16 @@ using ImageContrastAdjustment
 using Interpolations
 
 # load spaces
-dataloc = "../data"
+dataloc = ""
 
-fspace = MAT.matread(dataloc * "/PCAModel_F.mat");
+fspace = MAT.matread(dataloc * "PCAModel_F.mat");
 
-mspace = MAT.matread(dataloc * "/PCAModel_M.mat");
+mspace = MAT.matread(dataloc * "PCAModel_M.mat");
 
 # some variance data to go along
-mvariance = matread(dataloc * "/variance_M.mat");
+mvariance = matread(dataloc * "variance_M.mat");
 m_sd = sqrt.(mvariance["variance"]); # standard deviation
-fvariance = matread(dataloc * "/variance_F.mat");	
+fvariance = matread(dataloc * "variance_F.mat");	
 f_sd = sqrt.(fvariance["variance"]); # standard deviation
 
 # "add the *variance/sd* to the dict"
