@@ -13,7 +13,7 @@ using ImageContrastAdjustment
 using Interpolations
 
 # load spaces
-dataloc = "data"
+dataloc = "../data"
 
 fspace = MAT.matread(dataloc * "/PCAModel_F.mat");
 
@@ -205,7 +205,16 @@ function launchServer(port)
 
     route("/") do
         html("""
-        <h1>minimal face app</h1>"Hi there - minimal face app!"
+        <h1>minimal face app</h1>
+        <p>testing some basic API calls at /im route</p>
+        <ul>
+            <li><a href="/im">/im  the basic image</a></li>
+            <li><a href="/im?caricature=1.5">/im?caricature=1.5</a></li>
+            <li><a href="/im?caricature=-1.8">/im?caricature=-1.8</a></li>
+        </ul>
+        <p>you can also try editing the URL, as per REST API ... <br>
+            <code>?caricature=1.2</code>, where you can replace the value 1.2 with your choice. </p>
+       
         """)
     end
 
@@ -240,6 +249,10 @@ function launchServer(port)
         </p>
         
         <img src="data:image/png;base64,$(data)" width="30%">
+        <br>
+
+        <a href="/">go back to main page</a>
+
         </center>
    
         """)
