@@ -1,2 +1,2 @@
-web: julia --project src/app.jl $PORT
+web: julia --project src/faceapp.jl $PORT
 

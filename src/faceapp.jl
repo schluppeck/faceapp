@@ -249,7 +249,10 @@ function launchServer(port)
     Genie.AppServer.startup()
 end
 
-
-launchServer(parse(Int, ARGS[1]))
+if isempty(ARGS)
+    launchServer(3000)
+else
+    launchServer(parse(Int, ARGS[1]))
+end
 
 
