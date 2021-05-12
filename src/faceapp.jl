@@ -13,7 +13,7 @@ using ImageContrastAdjustment
 using Interpolations
 
 # load spaces
-dataloc = ""
+dataloc = "./src/"
 
 fspace = MAT.matread(dataloc * "PCAModel_F.mat");
 
