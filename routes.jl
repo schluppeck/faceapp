@@ -12,6 +12,8 @@ using LinearAlgebra
 using ImageContrastAdjustment
 using Interpolations
 
+
+## @TODO - break out image based stuff into separate file
 # load spaces
 dataloc = "./src/"
 
@@ -194,11 +196,11 @@ imF = minimalGenFace(facepoint, fspace);
 img_adjusted = 
 	adjust_histogram(imF, alg);
 
-route("/") do
+route("/default") do
     serve_static_file("welcome.html")
 end
     
-route("/list") do
+route("/") do
     html("""
     <h1>minimal face app</h1>
     <p>testing some basic API calls at /im route</p>
@@ -253,6 +255,26 @@ route("/im") do
     """)
 end
 
+"""
+force_compile
+
+make sure that each API endpoint gets hit at least one time 
+to make sure the methods get pre-compiled (at start of app)
+
+Reference
+  
+   https://geniejl.readthedocs.io/en/latest/documentation/80--Force_Compiling_Routes/
+
+"""
+function force_compile()
+  sleep(5)
+
+  for (name, r) in Router.named_routes()
+    Genie.Requests.HTTP.request(r.method, "http://localhost:8000" * tolink(name))
+  end
+end
+
+@async force_compile()
 
 
 
