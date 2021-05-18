@@ -1,5 +1,11 @@
+name = "Faceapp"
+uuid = "8ab4387d-7a26-49fa-8d28-191d211d3135"
+authors = ["Denis Schluppeck <denis.schluppeck@gmail.com>"]
+version = "0.1.0"
+
 [deps]
 Base64 = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
 Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
 ImageContrastAdjustment = "f332f351-ec65-5f6a-b3d1-319c6670881a"
@@ -8,4 +14,7 @@ ImageMagick = "6218d12a-5da1-5696-b52f-db25d2ecc6d1"
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 Interpolations = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+LoggingExtras = "e6f89c97-d47a-5376-807f-9c37f3926c36"
 MAT = "23992714-dd62-5051-b70f-ba57cb901cac"
+MbedTLS = "739be429-bea8-5141-9913-cc70e7f3736d"

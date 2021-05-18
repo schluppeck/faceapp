@@ -470,6 +470,12 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 [[Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
+[[LoggingExtras]]
+deps = ["Dates", "Logging"]
+git-tree-sha1 = "59b45fd91b743dff047313bb7af0f84167aef80d"
+uuid = "e6f89c97-d47a-5376-807f-9c37f3926c36"
+version = "0.4.6"
+
 [[LoweredCodeUtils]]
 deps = ["JuliaInterpreter"]
 git-tree-sha1 = "9e3377afc44de61ae2abeaee4fa3a971f9a5c0bc"
